@@ -28,7 +28,7 @@ export const postsRouter = createTRPCRouter({
           code: "INTERNAL_SERVER_ERROR",
           message: "Author for post not found!",
         });
-      console.log(author.username);
+
       return {
         post,
         author: { ...author, username: author.username },
@@ -36,4 +36,3 @@ export const postsRouter = createTRPCRouter({
     });
   }),
 });
-// i did return the last thing
